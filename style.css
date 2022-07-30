@@ -21,6 +21,7 @@ body {
 }
 .hero-btn {
   box-shadow: 0px 5px 2px #ef8d21;
+  animation: fadeIn 800ms ease-out;
 }
 
 .col-carousel {
@@ -97,4 +98,85 @@ button:active {
   height: 9.0625rem;
   margin: 1.25rem auto 0;
   width: 9.0625rem;
+}
+.headline .text-secondary {
+  animation: fadeInDown 800ms ease-out;
+}
+.headline .display-4 {
+  animation: fadeInUp 800ms ease-out;
+}
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+.ellipse1 {
+  position: absolute;
+  width: 236px;
+  height: 236px;
+  left: 2px;
+  top: 30%;
+  border-radius: 100%;
+  opacity: 0.1;
+  border: 60px solid rgba(0, 0, 0, 0.3);
+}
+.ellipse2 {
+  position: absolute;
+  width: 104px;
+  height: 104px;
+  left: 50%;
+  top: 18%;
+  border-radius: 100%;
+  animation: floating infinite ease-in-out 5s;
+  border: 8px solid rgba(239, 141, 33, 0.2);
+}
+
+/* Keyframes */
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    transform: translate(0, 15px);
+  }
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
