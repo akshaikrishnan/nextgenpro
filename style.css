@@ -121,6 +121,7 @@ button:active {
   top: 30%;
   border-radius: 100%;
   opacity: 0.1;
+  animation: floating infinite ease-in-out 6s;
   border: 60px solid rgba(0, 0, 0, 0.3);
 }
 .ellipse2 {
@@ -132,6 +133,9 @@ button:active {
   border-radius: 100%;
   animation: floating infinite ease-in-out 5s;
   border: 8px solid rgba(239, 141, 33, 0.2);
+}
+.btn-success {
+  border-radius: 30px;
 }
 
 /* Keyframes */
